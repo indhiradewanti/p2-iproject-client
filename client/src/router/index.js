@@ -4,6 +4,9 @@ import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 import Verification from '../views/Verification.vue'
+import Doctor from '../views/Doctor.vue'
+import Chat from '../views/Chat.vue'
+
 
 Vue.use(VueRouter)
 
@@ -24,9 +27,19 @@ const routes = [
     component: Register
   },
   {
+    path: '/doctor',
+    name: 'Doctor',
+    component: Doctor
+  },
+  {
     path: '/verification',
     name: 'Verification',
     component: Verification
+  },
+  {
+    path: '/chat',
+    name: 'Chat',
+    component: Chat
   }
 ]
 

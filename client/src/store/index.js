@@ -7,11 +7,21 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    isLogin: false
+    doctors : [],
+    isLogin : false,
+    name : localStorage.name,
+    messages : []
   },
   mutations: {
+    GET_DOCTORS(state, payload) {
+      state.doctors = payload
+    },
     SET_ISLOGIN(state, payload) {
       state.isLogin = payload
+    },
+    PUSH_MESSAGE(state, payload) {
+      console.log(payload);
+      state.messages.push(payload)
     }
   },
   actions: {
@@ -22,8 +32,8 @@ export default new Vuex.Store({
         data : payload
       })
       .then(({data}) => {
-        console.log(data);
         localStorage.setItem('access_token', data.token)
+        localStorage.setItem('name', data.name)
         commit('SET_ISLOGIN', true)
         router.push('/')
       })
@@ -48,6 +58,19 @@ export default new Vuex.Store({
     logout({commit}) {
       localStorage.clear()
       commit('SET_ISLOGIN', false)
+    },
+    getDoctors({ commit }, payload) {
+      axios({
+        url: "/doctors",
+        method: "GET",
+      })
+        .then(({data}) => {
+          commit('GET_DOCTORS', data)
+          console.log(data);
+        })
+        .catch(err => {
+          console.log(err.response);
+        })
     }
   },
   modules: {

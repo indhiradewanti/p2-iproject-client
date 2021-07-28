@@ -2,7 +2,7 @@
       <!-- ======= Appointment Section ======= -->
     <section id="appointment" class="appointment section-bg">
       <div class="container">
-<br><br><br><br>
+<br><br><br><br><br><br><br>
         <div class="section-title">
           <h2>Login</h2>
           
@@ -38,9 +38,10 @@ export default {
     },
     methods : {
         login() {
+          this.$socket.emit('loginUser', this.email)
             this.$store.dispatch('login', {
-                email : this.email, password : this.password
-                })
+              email : this.email, password : this.password
+            })
         }
     }
 }

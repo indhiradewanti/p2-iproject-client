@@ -2,7 +2,7 @@
       <!-- ======= Appointment Section ======= -->
     <section id="appointment" class="appointment section-bg">
       <div class="container mt-5">
-        <br><br>
+        <br><br><br><br><br><br>
         <div class="section-title">
           <h2>Register</h2>
         </div>
