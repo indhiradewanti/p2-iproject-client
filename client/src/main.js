@@ -22,7 +22,7 @@ Vue.config.productionTip = false
 import * as VueGoogleMaps from 'vue2-google-maps'
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'AIzaSyCQjq5RfgTnUcLvoy_Iw5sS5RmBVXwV3gQ'
+    key: 'AIzaSyDFzGWI0R0zMZVtb3H8120A7Sr_TDv7iWk'
   },
 })
 Vue.use(BootstrapVue)
