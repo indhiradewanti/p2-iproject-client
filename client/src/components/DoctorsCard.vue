@@ -9,7 +9,7 @@
             <h6>{{doctor.Hospital.location}}</h6>
             <p>Has been working for {{doctor.year}} years</p>
 
-            <a @click.prevent="" href=# class="appointment-btn scrollto mt-3"><span class="d-none d-md-inline">{{doctor.price}}</span><i class="bx bx-chevron-right"></i></a>
+            <a @click.prevent="" href=# class="appointment-btn scrollto mt-3"><span class="d-none d-md-inline">{{(doctor.price).toLocaleString('id-ID', {style: 'currency',currency: 'IDR'})}}</span><i class="bx bx-chevron-right"></i></a>
 
             </div>
             

@@ -1,6 +1,6 @@
 <template>
 
-    <div v-if="message.name === name" class="direct-chat-msg">
+    <div v-if="message.name !== name" class="direct-chat-msg">
         <div class="direct-chat-info clearfix"> 
             <span class="direct-chat-name pull-left">{{message.name}}</span>
             <span class="direct-chat-timestamp pull-right">{{new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}}</span> 

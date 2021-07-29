@@ -17,15 +17,23 @@ import "../src/assets/vendor/remixicon/remixicon.css"
 import "../src/assets/vendor/swiper/swiper-bundle.min.css"
 import "../src/assets/css/style.css"
 import VueSocketIO from 'vue-socket.io'
+import VueGeoLocation from 'vue-browser-geolocation'
+Vue.config.productionTip = false
+import * as VueGoogleMaps from 'vue2-google-maps'
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyCQjq5RfgTnUcLvoy_Iw5sS5RmBVXwV3gQ'
+  },
+})
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
+Vue.use(VueGeoLocation)
 Vue.use(
   new VueSocketIO({
     debug : true,
     connection : "http://localhost:3000/"
   })
 )
-Vue.config.productionTip = false
 
 new Vue({
   router,

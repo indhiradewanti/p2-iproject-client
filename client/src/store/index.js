@@ -20,7 +20,6 @@ export default new Vuex.Store({
       state.isLogin = payload
     },
     PUSH_MESSAGE(state, payload) {
-      console.log(payload);
       state.messages.push(payload)
     }
   },

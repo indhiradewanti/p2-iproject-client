@@ -35,6 +35,7 @@
 
 <script>
 import IncomingMessage from '@/components/IncomingMessage.vue'
+import { mapActions, mapState } from 'vuex'
 
 export default {
     name : 'Chat',
@@ -43,7 +44,8 @@ export default {
     },
     data () {
         return {
-            inputMsg : ""
+            inputMsg : "",
+            newMessage : null
         }
     },
     sockets : {
@@ -63,9 +65,7 @@ export default {
         }
     },
     computed : {
-        messages() {
-            return this.$store.state.messages
-        }
+        ...mapState(['messages'])
     }
 }
 </script>

@@ -22,28 +22,27 @@
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="fas fa-comments"></i>
                     <h4>Chats</h4>
-                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                    <p>Our Live Chat feature allows you to “chat” with our qualified and fully registered Doctors, Pharmacists and Nutritionists anytime, anywhere</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
-                    <i class="fas fa-video"></i>
-                    <h4>Video Cals</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                    <i class="fas fa-stethoscope"></i>
+                    <h4>Board Certified Speacialis</h4>
+                    <p>Advice from best doctors and top medical experts</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
-                    <i class="fas fa-phone-alt"></i>
-                    <h4>Phone Cals</h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                    <i class="fas fa-wallet"></i>
+                    <h4>Concierge Services</h4>
+                    <p>Top 10 Telemedicine companies in the world. Yo Doc health platform has been recognized by various organizations as one of the top telemedicine application for online medical help.</p>
                   </div>
                 </div>
               </div>
             </div><!-- End .content-->
           </div>
         </div>
-
       </div>
     </section><!-- End Why Us Section -->
         <!-- ======= Services Section ======= -->
@@ -56,18 +55,20 @@
 
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+              <router-link to="/chat" href=#>
             <div class="icon-box">
               <div class="icon"><i class="fas fa-notes-medical"></i></div>
-              <h4><router-link to="/chat" href=#>Chat with doctors</router-link></h4>
-              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+              <h4>Chat with doctors</h4>
+              <p>Start chatting with our healthcare professionals and they will provide you with advice to your medical condition .</p>
             </div>
+            </router-link>
           </div>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
           <router-link to="/doctor" href=#>
             <div class="icon-box">
               <div class="icon"><i class="fas fa-hospital-user"></i></div>
               <h4>Doctors</h4>
-              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+              <p>More than 100++ top medical experts and best doctor from any hospitals in Indonesia</p>
             </div>
           </router-link>
           </div>

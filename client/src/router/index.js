@@ -6,6 +6,7 @@ import Register from '../views/Register.vue'
 import Verification from '../views/Verification.vue'
 import Doctor from '../views/Doctor.vue'
 import Chat from '../views/Chat.vue'
+import PaymentSuccess from '../views/PaymentSuccess.vue'
 
 
 Vue.use(VueRouter)
@@ -37,9 +38,21 @@ const routes = [
     component: Verification
   },
   {
+    path: '/success',
+    name: 'Success',
+    component: PaymentSuccess
+  },
+  {
     path: '/chat',
     name: 'Chat',
-    component: Chat
+    component: Chat,
+    beforeEnter: (to, from, next) => {
+      if (!localStorage.access_token) {
+        next('/login')
+      } else {
+        next()
+      }
+    }
   }
 ]
 
